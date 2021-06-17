@@ -14,10 +14,9 @@ public class InquiryForm {
 	private String email;
 	
 	@NotNull
-	private String conents;
+	private String contents;
 	
 	public InquiryForm() {
-		
 	}
 	
 	public String getName() {
@@ -32,11 +31,11 @@ public class InquiryForm {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getConents() {
-		return conents;
+	public String getContents() {
+		return contents;
 	}
-	public void setConents(String conents) {
-		this.conents = conents;
+	public void setContents(String contents) {
+		this.contents = contents;
 	}
 
 }

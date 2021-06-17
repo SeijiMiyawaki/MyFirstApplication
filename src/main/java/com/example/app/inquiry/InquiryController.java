@@ -14,13 +14,13 @@ public class InquiryController {
 	
 	@GetMapping("/form")
 	public String form(InquiryForm inquiryForm, Model model) {
-		model.addAttribute("title", "inquiry Form");
+		model.addAttribute("title", "Inquiry Form");
 		return "inquiry/form";
 	}
 	
 	@PostMapping("/form")
 	public String formGoBack(InquiryForm inquiryForm, Model model) {
-		model.addAttribute("title", "inquiry Form");
+		model.addAttribute("title", "Inquiry Form");
 		return "inquiry/form";
 	}
 	
