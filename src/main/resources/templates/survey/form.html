@@ -5,8 +5,7 @@
 <title th:text="${title}">Insert title here</title>
 </head>
 <body>
-<!-- <div th:replace="~{block/header::headerA}"></div>
- --><h1 th:text="${title}">title</h1>
+<h1 th:text="${title}">title</h1>
 <h2 th:text="${complete}"></h2>
 <form method="post" action="#" th:action="@{/survey/confirm}" th:object="${surveyForm}">
 	<label for="age">Age:</label>
