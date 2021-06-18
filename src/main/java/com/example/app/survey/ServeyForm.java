@@ -5,7 +5,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-public class SurveyForm {
+public class ServeyForm {
 	
 	@Min(0)
 	@Max(150)
@@ -19,7 +19,7 @@ public class SurveyForm {
 	@Size(min = 1, max = 200, message = "Please input 200characters or less")
 	private String comment;
 	
-	public SurveyForm() {
+	public ServeyForm() {
 	}
 
 	public int getAge() {
