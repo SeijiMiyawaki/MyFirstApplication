@@ -11,46 +11,46 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("/servey")
-public class ServeyController {
+@RequestMapping("/survey")
+public class SurveyController {
 	
 	@GetMapping("/form")
-	public String form(ServeyForm serveyForm,
+	public String form(SurveyForm surveyForm,
 			Model model,
 			@ModelAttribute("complete") String complete) {
-		model.addAttribute("title", "Servey Form");
-		return "servey/form";
+		model.addAttribute("title", "Survey Form");
+		return "survey/form";
 	}
 	
 	@PostMapping("/form")
-	public String formGoBack(ServeyForm serveyForm, Model model) {
-		model.addAttribute("title", "Servey Form");
-		return "servey/form";
+	public String formGoBack(SurveyForm surveyForm, Model model) {
+		model.addAttribute("title", "Survey Form");
+		return "survey/form";
 	}
 	
 	@PostMapping("/confirm")
-	public String confirm(@Validated ServeyForm serveyForm,
+	public String confirm(@Validated SurveyForm surveyForm,
 			BindingResult result,
 			Model model) {
 		if(result.hasErrors()) {
-			model.addAttribute("title", "Servey Form");
-			return "servey/form";
+			model.addAttribute("title", "Survey Form");
+			return "survey/form";
 		}
 		model.addAttribute("title", "Confirm Page");
-		return "servey/confirm";
+		return "survey/confirm";
 	}
 	
 	@PostMapping("/complete")
-	public String complete(@Validated ServeyForm serveyForm,
+	public String complete(@Validated SurveyForm surveyForm,
 			BindingResult result,
 			Model model,
 			RedirectAttributes redirectAttributes) {
 		if(result.hasErrors()) {
 			model.addAttribute("title", "Servey Form");
-			return "servey/form";
+			return "survey/form";
 		}
 		redirectAttributes.addFlashAttribute("complete", "Registered!");
-		return "redirect:/servey/form";
+		return "redirect:/survey/form";
 		
 	}
 //	Survey survey = new Survey();
