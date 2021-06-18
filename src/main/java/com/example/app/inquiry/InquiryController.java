@@ -47,7 +47,7 @@ public class InquiryController {
 			Model model,
 			RedirectAttributes redirectAttributes) {
 		if(result.hasErrors()) {
-			model.addAttribute("title", "InquiryForm");
+			model.addAttribute("title", "Inquiry Form");
 			return "inquiry/form";
 		}
 		redirectAttributes.addFlashAttribute("complete", "Registered!");
