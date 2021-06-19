@@ -31,7 +31,6 @@ public class InquiryController {
 	@GetMapping
 	public String index(Model model) {
 		List<Inquiry> list = inquiryService.getAll();
-		
 		model.addAttribute("inquiryList", list);
 		model.addAttribute("title", "Inquiry Index");
 		return "inquiry/index";
@@ -79,9 +78,7 @@ public class InquiryController {
 		inquiry.setEmail(inquiryForm.getEmail());
 		inquiry.setContents(inquiryForm.getContents());
 		inquiry.setCreated(LocalDateTime.now());
-		
 		inquiryService.save(inquiry);
-		
 		redirectAttributes.addFlashAttribute("complete", "Registered!");
 		return "redirect:/inquiry/form";
 	}
