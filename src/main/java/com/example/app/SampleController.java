@@ -33,10 +33,6 @@ public class SampleController {
 		model.addAttribute("title", "Inquiry Form");
 		model.addAttribute("name", map.get("name"));
 		model.addAttribute("email", map.get("email"));
-		
-		
-		
-		
 		return "test";
 	}
 
