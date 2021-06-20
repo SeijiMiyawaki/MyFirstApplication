@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.InitBinder;
 
+import com.example.service.InquiryNotFoundException;
+
 
 /**
  * 全てのControllerで共通処理を定義
@@ -24,10 +26,16 @@ public class WebMvcControllerAdvice {
         dataBinder.registerCustomEditor(String.class, new StringTrimmerEditor(true));
     }
     
-    @ExceptionHandler(EmptyResultDataAccessException.class)
-    public String handerException(EmptyResultDataAccessException e, Model model) {
-    	model.addAttribute("message", e);
-    	return "error/CustomPage";
-    }
+//    @ExceptionHandler(EmptyResultDataAccessException.class)
+//    public String handleException(EmptyResultDataAccessException e, Model model) {
+//    	model.addAttribute("message", e);
+//    	return "error/CustomPage";
+//    }
+//    
+//	@ExceptionHandler(InquiryNotFoundException.class)
+//	public String handleException(InquiryNotFoundException e, Model model) {
+//		model.addAttribute("message", e);
+//		return "error/CustomPage";
+//	}
    
 }
